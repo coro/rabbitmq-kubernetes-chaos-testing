@@ -6,7 +6,7 @@ set -euo pipefail
 curl -sSL https://mirrors.chaos-mesh.org/latest/install.sh | bash
 
 # Deploy RabbitMQ Operators & CRDs
-kubectl apply -f https://github.com/rabbitmq/cluster-operator/releases/download/0.49.0/cluster-operator.yml
+kubectl apply -f https://github.com/rabbitmq/cluster-operator/releases/download/v1.1.0/cluster-operator.yml
 
 pushd kube-prometheus
 docker run --rm -v $(pwd):$(pwd) --workdir $(pwd) quay.io/coreos/jsonnet-ci jb update
